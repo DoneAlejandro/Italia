@@ -47,6 +47,8 @@ body {
 // Style
 .wrapper {
 	position: relative;
+	overflow: hidden;
+
 	&__bg {
 		position: absolute;
 		left: 51px;
@@ -61,7 +63,8 @@ body {
 .grid {
 	&__body {
 		display: grid;
-		grid-template-columns: 35% auto 35%;
+		grid-template-columns: 1fr auto 1fr;
+		justify-content: center;
 	}
 	&__item {
 		height: 4235px;
@@ -338,6 +341,9 @@ body {
 		}
 	}
 	.grid {
+		&__body {
+			grid-template-columns: 1fr;
+		}
 		display: flex;
 		justify-content: center;
 		&__item {

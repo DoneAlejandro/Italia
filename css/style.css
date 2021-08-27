@@ -59,7 +59,8 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .wrapper {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .wrapper__bg {
     position: absolute;
     left: 51px;
@@ -71,8 +72,11 @@ body {
 .grid__body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 35% auto 35%;
-  grid-template-columns: 35% auto 35%; }
+  -ms-grid-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .grid__item {
   height: 4235px;
@@ -388,6 +392,9 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    .grid__body {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr; }
     .grid__item_green {
       display: none; }
     .grid__item_red {

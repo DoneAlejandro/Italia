@@ -56,13 +56,14 @@ body {
 }
 .container {
 	width: 320px;
-	margin: 0 auto;
+	padding: 0 auto;
 }
 
 .grid {
 	&__body {
 		display: grid;
-		grid-template-columns: 35% 30% 35%;
+		grid-template-columns: 35% auto 35%;
+		justify-content: center;
 	}
 	&__item {
 		height: 4235px;
@@ -331,15 +332,20 @@ body {
 }
 
 
-@media screen and (max-width: 320px) {
+@media (max-width: 762px) {
+	.wrapper {
+		&__bg {
+			left: -685px;
+			top: 1074px;
+		}
+	}
 	.grid {
 		&__item {
 			&_green {
 				display: none;
 			}
 			&_info {
-				width: 100%;
-				margin: 0 auto;
+				
 			}
 			&_red {
 				display: none;

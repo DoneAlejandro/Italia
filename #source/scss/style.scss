@@ -56,14 +56,12 @@ body {
 }
 .container {
 	width: 320px;
-	padding: 0 auto;
 }
 
 .grid {
 	&__body {
 		display: grid;
 		grid-template-columns: 35% auto 35%;
-		justify-content: center;
 	}
 	&__item {
 		height: 4235px;
@@ -340,6 +338,8 @@ body {
 		}
 	}
 	.grid {
+		display: flex;
+		justify-content: center;
 		&__item {
 			&_green {
 				display: none;
